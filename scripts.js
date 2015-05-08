@@ -7,7 +7,7 @@
 
     (function () {
         //TO DO: check  addEventListener Support, Promise Support
-
+        
         var searchForm = document.getElementById('searchForm');
         searchForm.addEventListener('submit', function (e) {
             var searchTerm = document.getElementById('txtSearch').value;
@@ -83,19 +83,21 @@
         pagination.style.display = 'block';
         pagination.setAttribute('data-total-results', total);
         pagination.setAttribute('data-offset', offset);
-        var frag = document.createDocumentFragment();
+        var documentFragment = document.createDocumentFragment();
         var streams = data.streams;
         streams.forEach(function (stream) {
             var streamContainer = createElement('div', '', 'stream');
             var leftDiv = createElement('div', '', 'left');
             var streamImg = createElement('img');
             streamImg.src = stream.preview.medium;
+            streamImg.style.display = 'none';
+            streamImg.onload = function(){this.style.display = 'block';}
             var rightDiv = createElement('div', '', 'right');
             var streamHeading = createElement('h2', stream.channel.display_name);
             var viewersText = stream.game + " - " + stream.viewers.toString() + " viewers";
             var gameViewers = createElement('div', viewersText, 'gameViewers');
             var status = createElement('div', stream.channel.status);
-           addChild(frag,
+           addChild(documentFragment,
                addChild(streamContainer,
                    addChild(leftDiv, streamImg),
                    addChild(rightDiv, streamHeading, gameViewers, status)
@@ -104,7 +106,7 @@
 
         });
         streamsDiv.innerHTML = '';
-        streamsDiv.appendChild(frag);
+        streamsDiv.appendChild(documentFragment);
     }
 
     function createElement(tag, text, cssClass) {
