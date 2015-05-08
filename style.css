@@ -1,0 +1,82 @@
+body{
+    font-family: 'Helvetica', 'Arial';
+    font-size: 14px;
+}
+#container{
+    width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    margin-top: 50px;
+}
+#searchForm{
+    border-bottom: 1px solid #333;
+    padding:20px;
+}
+#searchForm input[type='text']{
+    width: 150px;
+    margin-right: 30px;
+}
+#results{
+    padding:20px;
+    font-size: 0.8em;
+}
+#pagination{
+    display: none;
+}
+#currentPage{
+    top: 3px;
+    position: relative;
+}
+#loadingInfo{
+    display: none;
+    position: relative;
+    left: 50px;
+}
+.icons{
+    float: right;
+}
+.icons .leftIcon, .icons .rightIcon{
+    width:25px;
+    height:25px;
+    background-image: url('sprite.png');
+    cursor:pointer;
+}
+.icons .leftIcon{
+    float: left;
+   background-position: 0 34px;
+}
+.icons .rightIcon{
+    float: right;
+    background-position: 25px 34px;
+}
+.stream{
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+.stream .left{
+    float: left;
+    width: 320px;
+    height: 180px;
+    background: #eee;
+}
+.stream .right{
+    box-sizing: border-box;
+    float: left;
+    width:400px;
+    padding-left: 20px;
+}
+
+.stream .gameViewers{
+    margin-bottom: 10px;
+}
+.stream h2{
+    margin: 10px 0;
+}
+.stream:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
