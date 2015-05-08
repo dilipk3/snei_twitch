@@ -115,7 +115,7 @@
         if (typeof text != 'undefined' && text !== '')
             ele.textContent = text;
         if (typeof cssClass != 'undefined')
-            ele.classList.add(cssClass);
+            ele.className = cssClass;
         return ele;
 
     }
