@@ -4,10 +4,11 @@
 (function() {
     'use strict';
     var resultsPerPage = 10;
-
     (function () {
-        //TO DO: check  addEventListener Support, Promise Support
-        
+        require([{
+            'Promise': 'es6-promise.min.js'
+        }]);
+
         var searchForm = document.getElementById('searchForm');
         searchForm.addEventListener('submit', function (e) {
             var searchTerm = document.getElementById('txtSearch').value;
@@ -33,17 +34,15 @@
             }
             searchTerm = encodeURIComponent(searchTerm);
             var callback = 'jsonp_' + Math.floor(Math.random() * 100000);
-            var s = document.createElement('script');
-            s.type = "text/javascript";
-            s.src = "https://api.twitch.tv/kraken/search/streams?q=" + searchTerm + '&callback=' + callback + '&offset=' + offset;
-            s.async = true;
-            document.getElementsByTagName('head')[0].appendChild(s);
+            var src = "https://api.twitch.tv/kraken/search/streams?q=" + searchTerm + '&callback=' + callback + '&offset=' + offset;
+            var s = loadScript(src);
             s.onerror = reject;
             window[callback] = function (data) {
                 data._offset = offset;
                 resolve(data);
                 document.getElementsByTagName('head')[0].removeChild(s);
-                delete window[callback];
+               try{ delete window[callback]; }
+               catch(e){ window[callback] = undefined; }
             };
         });
 
@@ -59,7 +58,7 @@
                 document.getElementById('loadingInfo').style.display = "none";
                 renderUI(data);
             })
-            .catch(function (error) {
+            ['catch'](function (error) {
                 document.getElementById('loadingInfo').style.display = "none";
                 document.getElementById('streams').textContent = "An error occurred while loading the data.";
             });
@@ -140,7 +139,23 @@
             offset += resultsPerPage;
             getData(searchTerm,offset);
         }
+    }
 
+    function require(list){
+       list.forEach(function(dependency){
+           var key = Object.keys(dependency)[0];
+           if(!window[key])
+            loadScript(dependency[key]);
+       });
+    }
+
+    function loadScript(src){
+        var s = document.createElement('script');
+        s.type = "text/javascript";
+        s.src = src;
+        s.async = true;
+        document.getElementsByTagName('head')[0].appendChild(s);
+        return s;
     }
 
 })();

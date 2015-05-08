@@ -24,8 +24,20 @@
       <file leaf-file-name="scripts.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17355372">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            <state vertical-scroll-proportion="-2.768595">
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#41#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scripts.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="3058" selection-start-line="3" selection-start-column="3058" selection-end-line="3" selection-end-column="3058" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
@@ -36,8 +48,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.625">
-              <caret line="17" column="121" selection-start-line="17" selection-start-column="121" selection-end-line="17" selection-end-column="121" />
+            <state vertical-scroll-proportion="-14.375">
+              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -47,7 +59,17 @@
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+              <caret line="37" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="81" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="981" selection-start-line="0" selection-start-column="981" selection-end-line="0" selection-end-column="981" />
               <folding />
             </state>
           </provider>
@@ -68,8 +90,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/scripts.js" />
+        <option value="$PROJECT_DIR$/scripts.min.js" />
+        <option value="$PROJECT_DIR$/styles.min.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -227,23 +251,41 @@
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+          <caret line="37" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="81" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="981" selection-start-line="0" selection-start-column="981" selection-end-line="0" selection-end-column="981" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.625">
-          <caret line="17" column="121" selection-start-line="17" selection-start-column="121" selection-end-line="17" selection-end-column="121" />
+        <state vertical-scroll-proportion="-14.375">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="3058" selection-start-line="3" selection-start-column="3058" selection-end-line="3" selection-end-column="3058" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17355372">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        <state vertical-scroll-proportion="-2.768595">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="31" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
           </folding>
