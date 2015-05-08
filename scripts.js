@@ -61,6 +61,8 @@
             ['catch'](function (error) {
                 document.getElementById('loadingInfo').style.display = "none";
                 document.getElementById('streams').textContent = "An error occurred while loading the data.";
+            if(error)
+                 console.log(error.message);
             });
     }
 
